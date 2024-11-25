@@ -25,3 +25,9 @@ class Student {
         return this.#staatus
     }
 }
+
+const student = new Student('taavi', 101)
+console.log(`${student.getName()}, ${student.getId()}, ${student.getStatus()}`)
+student.setName('laura')
+student.setStatus('Expelled')
+console.log(`${student.getName()}, ${student.getId()}, ${student.getStatus()}`)
