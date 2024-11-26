@@ -16,6 +16,22 @@ class Course {
     getGrades() {
         return this.grades
     }
+
+    getAverageGrade() {
+        const len = this.getGrades().length
+        if (len) {
+            let sum = 0
+            this.getGrades().forEach(element => {
+                sum += element.grade
+            })
+            return sum / len
+        }
+        return -1
+    }
+
+    description() {
+        return `Nimi: ${this.name}, Hinded: ${this.getGrades()}`
+    }
 }
 
 module.exports = Course

@@ -32,9 +32,9 @@ class Student extends Person {
     getAverageGrade() {
         const len = this.getGrades().length
         if (len) {
-            sum = 0
+            let sum = 0
             this.getGrades().forEach(element => {
-                sum += element.getGrade()
+                sum += element.grade
             })
             return sum / len
         }
